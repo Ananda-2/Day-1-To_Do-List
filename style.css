@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif ;
+
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+
+.to-do-list{
+    background-color: rgb(178, 191, 202);
+    /* margin: 50px 100px; */
+    max-width: 50vw;
+    margin: 50px auto 10px;
+    padding: 40px;
+    border-radius: 20px;
+    align-items: center;
+    /* display: flex; */
+
+}
+
+.to-do-list h1{
+    font-size: 17px;
+}
+.to-do-list img {
+    height: 17px;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: aliceblue;
+    border-radius: 30px;
+}
+.search input{
+    padding: 10px 20px;
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.search button{
+    padding: 10px 50px;
+    color: aliceblue;
+    background-color: #675b0a;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    margin-top: 20px;
+    margin-left: 20px; 
+}
+
+ul li{
+    padding: 12px 8px 12px 50px;
+    font-size: 17px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    /* justify-content: space-between; */
+}
+
+/* ADD CHECK IMAGE BEFORE LIST --------------- */
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 24px;
+
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+
+}
+
+.checked{
+    text-decoration: line-through;
+
+}
+ul li.checked::before{
+    background-image: url(images/checked.png);
+
+}
+
+ul li span{
+    /* position: absolute; */
+    float: right;
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
+    padding: 1px;
+    background-color: rgb(158, 153, 153);
+    border-radius: 50%;
+    align-items: center;
+    text-align: center;
+}
+ul li span:hover{
+    /* position: absolute; */
+    background-color: rgb(219, 124, 124);
+
+}
